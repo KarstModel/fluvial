@@ -1,3 +1,7 @@
+upland/Hima_results
+upland/rainfall_series
+upland/runoff_results
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
