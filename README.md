@@ -6,7 +6,7 @@ A coupled sediment transport and flooding landlab experiment
 |Contributors|At| |
 |:--|:--|--:|
 |Shelby Ahrendt| | |
-|Josie Arcuri| | |
+|Josie Arcuri|Indiana University Sed Systems Lab |https://github.com/josiearcuri |
 |Eric Barefoot| | |
 |Rachel Bosch|University of Cincinnati| |
 |François Clapuyt| | |
