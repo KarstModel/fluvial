@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from landlab.plot import graph, plot_network_and_parcels
 from landlab.plot.imshow import imshow_grid, imshow_grid_at_node
+from matplotlib.colors import LightSource
 
 
 def plot_discharge(hydrograph_time, discharge):
@@ -87,7 +88,7 @@ def plot_initial_floodplain(zFP, nX, nY, grid):
     # Plot 2D domain topography
     plt.figure(figsize=(14,8))
     plt.subplot(1,2,1)
-    ls = plt.LightSource(azdeg=315, altdeg=45)
+    ls = LightSource(azdeg=315, altdeg=45)
     plt.imshow(ls.hillshade(np.reshape(zFP,[nX,nY]), vert_exag=10), cmap='gray')
 
     #Plot 2D domain hydraulic cond.
@@ -107,6 +108,7 @@ def plot_overland_flow(rmg, cmap, outlet_nearest_raster_cell,elapsed_time,filepa
         plt.show()
 def plot_floodplain(grid, zFP, nX, nY, WaterMap, elapsed_time, filepath = ""):
     fig = plt.figure(figsize=(14, 8))
+    ls = LightSource(azdeg=315, altdeg=45)
     plt.imshow(ls.hillshade(np.reshape(z,[nX,nY]), vert_exag=10), cmap='gray',origin="lower")
     imshow_grid(grid,'surface_water__depth',
           limits=(0,1),cmap=WaterMap,                    
