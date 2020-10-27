@@ -57,16 +57,16 @@ def plot_network(network_grid):
     graph.plot_links(network_grid)
     plt.title("Links")
     plt.show()
-def plot_topography(network_grid, new_network_grid):
+def plot_topography(rmg, network_grid, new_network_grid):
 # Plot topography
     plt.figure(figsize=(12,8))
     graph.plot_nodes(network_grid,with_id=False,markersize=4)
     graph.plot_links(new_network_grid,with_id=False)
     imshow_grid(rmg, 'topographic__elevation',\
                 plot_name="Basin topography",\
-                color_for_closed=None,\
+                #color_for_closed=None,\
                 colorbar_label="$z$ [m]")
-    plr.show()
+    plt.show()
     
 def plot_storm(rmg, h):
     plt.figure(figsize=(14,8))
